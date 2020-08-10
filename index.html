@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Chat App</title>
+
+    <!--Go to https://console.firebase.google.com-->
+    <!--Sign in and add a project "fireMessage"-->
+    <!--PASTE SNIPPET HERE-->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+    // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAnwKyqib8kuA21KHHcncRT13bT1sAOPec",
+            authDomain: "firemessage-889a1.firebaseapp.com",
+            databaseURL: "https://firemessage-889a1.firebaseio.com",
+            projectId: "firemessage-889a1",
+            storageBucket: "firemessage-889a1.appspot.com",
+            messagingSenderId: "45549985743",
+            appId: "1:45549985743:web:11566106f30ac026"
+        };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+</script>
+
+
+
+    <!--custom files-->
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Chatroom</h1>
+
+    <!--This div will be populated with messages-->
+    <div class="allMessages">
+        
+    </div>
+    
+    <!--For user to input messages-->
+    <div class="userContainer">
+        <form>
+            <div class="inputContainer">
+                <div class="singleInput" id="disappear">
+                    <label for="username">Your name:</label>
+                    <input id="username" type="text">
+                </div>
+                <div class="singleInput">
+                    <label for="message">Message:</label>
+                    <input id="message" type="text">
+                </div>
+            </div>
+            
+        </form>
+        <button id="submitButton">Submit</button>
+    </div>
+</body>
+</html>
